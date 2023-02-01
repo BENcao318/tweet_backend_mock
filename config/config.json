@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "labber",
+    "password": "labber",
+    "database": "tweet",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "labber",
+    "password": "labber",
+    "database": "tweet",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "labber",
+    "password": "labber",
+    "database": "tweet",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
