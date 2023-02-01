@@ -38,7 +38,6 @@ exports.createUser = async (req, res) => {
       success: true,
       message: 'Signup success',
       messge2: null,
-      userData,
     })
   } catch (err) {
     res.status(500).send({
@@ -91,4 +90,13 @@ exports.signIn = async (req, res) => {
       message: `Error retrieving User with email=${email}, ${err}`,
     })
   }
+}
+
+exports.signOut = async (req, res) => {
+  req.session.destroy()
+  res.status(200).send({
+    success: true,
+    message: 'Signout success',
+    message2: null,
+  })
 }

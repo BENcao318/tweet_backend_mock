@@ -4,7 +4,6 @@ const Op = db.Sequelize.Op
 
 exports.createTweet = async (req, res) => {
   const { title, content } = req.body
-  const time = new Date(req.body.time)
 
   try {
     const user = await User.findOne({
@@ -36,14 +35,6 @@ exports.createTweet = async (req, res) => {
 
 exports.findTweet = async (req, res) => {
   const { username } = req.query
-
-  if (!req.session.user) {
-    return res.status(500).send({
-      success: false,
-      message: 'User is not authenticated to delete',
-      messge2: null,
-    })
-  }
 
   const userData = await User.findOne({
     raw: true,
@@ -84,7 +75,7 @@ exports.updateTweet = async (req, res) => {
 
     res.status(200).send({
       success: true,
-      message: 'Completed Task update success',
+      message: 'Successfully updated the tweet',
       messge2: null,
       updatedTweetData,
     })
@@ -116,7 +107,7 @@ exports.deleteTweet = async (req, res) => {
 
     res.status(200).send({
       success: true,
-      message: 'Successfully delete the task',
+      message: 'Successfully delete the tweet',
       messge2: null,
     })
   } catch (err) {

@@ -20,11 +20,12 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
     "pg": "^8.9.0",
-    "sequelize": "^6.28.0",
-    "supertest": "^6.3.3"
+    "sequelize": "^6.28.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19",
-    "sequelize-cli": "^6.6.0"
+    "sequelize-cli": "^6.6.0",
+    "supertest": "^6.3.3",
+    "supertest-session": "^4.1.0"
   }
 }
