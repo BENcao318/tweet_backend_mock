@@ -33,6 +33,7 @@ exports.createTweet = async (req, res) => {
   }
 }
 
+//find all the tweets from user
 exports.findTweet = async (req, res) => {
   const { username } = req.query
 
