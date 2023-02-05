@@ -59,7 +59,7 @@ exports.findTweet = async (req, res) => {
     tweetData,
   })
 }
-
+//update tweet with provided tweet id
 exports.updateTweet = async (req, res) => {
   const { tweet_id, title, content } = req.body
 
