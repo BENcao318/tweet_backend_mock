@@ -46,6 +46,7 @@ exports.createUser = async (req, res) => {
   }
 }
 
+// SignIn with username and password authentication
 exports.signIn = async (req, res) => {
   const { username, password } = req.body
 
